@@ -5,8 +5,7 @@ import pygame as pg
 import time
 import numpy as np
 
-
-n = 50
+n = 51
 
 
 def generate():
@@ -16,9 +15,9 @@ def generate():
 def draw(arr, ind):
     for i, num in enumerate(arr):
         if i == ind or i == ind + 1:
-            pg.draw.rect(display, 'blue', (20+ 15 * i, 0, 10, num))
+            pg.draw.rect(display, (num+100, 20, 60), (20 + 15 * i, 600-num*3-30, 10, num*3))
         else:
-            pg.draw.rect(display, 'red', (20+ 15 * i, 0, 10, num))
+            pg.draw.rect(display, (num+100, 20, 60), (20 + 15 * i, 600-num*3-30, 10, num*3))
 
 
 def sort():
@@ -29,12 +28,16 @@ def sort():
             time.sleep(0.005)
             if x[j] > x[j + 1]:
                 x[j], x[j + 1] = x[j + 1], x[j]
-            display.fill(('white'))
-    while True:
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                pygame.quit()
-                sys.exit()
+            display.fill((244, 244, 248))
+    # while True:
+    #     for event in pg.event.get():
+    #         if event.type == pg.QUIT:
+    #             print(x)
+    #             pygame.quit()
+    #             sys.exit()
+    #     draw(x, 10000)
+    #     pg.display.update()
+       # pg.
 
 
 
@@ -54,6 +57,5 @@ x = generate()
 #
 #     #print(x)
 #     pg.display.update()
-time.sleep(3)
+# time.sleep(3)
 sort()
-draw()
