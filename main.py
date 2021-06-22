@@ -15,17 +15,17 @@ def generate():
 def draw(arr, ind):
     for i, num in enumerate(arr):
         if i == ind or i == ind + 1:
-            pg.draw.rect(display, (num+100, 20, 60), (20 + 15 * i, 600-num*3-30, 10, num*3))
+            pg.draw.rect(display, (42, 183, 202), (20 + 15 * i, 600-num*3-30, 10, num*3))
         else:
             pg.draw.rect(display, (num+100, 20, 60), (20 + 15 * i, 600-num*3-30, 10, num*3))
 
 
 def sort():
     for i in range(n):
+        time.sleep(0.005)
         for j in range(0, n - i - 1):
             draw(x, j)
             pg.display.update()
-            time.sleep(0.005)
             if x[j] > x[j + 1]:
                 x[j], x[j + 1] = x[j + 1], x[j]
             display.fill((244, 244, 248))

@@ -1,0 +1,15 @@
+# screen size
+WIDTH = 1000
+HEIGHT = 600
+
+# array
+LOWER_LIMIT = 1
+UPPER_LIMIT = 100
+SIZE = 100
+
+# colors
+DARK = (23, 23, 23)
+GRAPE = (75, 63, 114)
+WHITE = (244, 244, 248)
+RED = (220, 20, 60)
+BLUE = (42, 183, 202)
